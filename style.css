@@ -208,6 +208,7 @@ input {
   background:
     linear-gradient(145deg, rgba(198, 255, 0, 0.15), transparent 35%),
     #151515;
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
@@ -353,6 +354,7 @@ input {
 
 .content-card {
   background: var(--card);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 22px;
@@ -452,6 +454,7 @@ input {
   background:
     linear-gradient(130deg, rgba(198, 255, 0, 0.12), transparent 45%),
     #141414;
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 34px;
