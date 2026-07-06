@@ -1,0 +1,30 @@
+const form = document.querySelector(".community-form");
+const emailInput = document.querySelector(" .community-form input");
+const submitButton = document.querySelector(" .community-form button");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = emailInput.ariaValueMax.trim();
+
+    if (!email) {
+        alert("Eh put your email first.");
+        return;
+    }
+
+    submitButton.textContent = "Lai lai, welcome";
+    submitButton.ariaDisabled = true;
+
+    emailInput.ariaValueMax = "";
+
+setTimeout(() => {
+    submitButton.textContent = "Join Us";
+    submitButton.disabled = false;
+}, 3000);
+});
+
+const playButton = document.querySelector(".play-button");
+
+playButton.addEventListener("click", function () {
+    alert("Connect this button to your latest Youtube episode or Spotify link.");
+});
