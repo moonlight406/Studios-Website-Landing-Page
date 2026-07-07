@@ -3,7 +3,7 @@
 WORK-IN-PROGRESS landing page for ZKM Studios.
 
 ## Main Links:
-- Netlify Link:https://zkm-studios-templates.netlify.app/
+- Netlify Link:https://zkm-studios-templates.netlify.app/(DO NOT USE)
 - Figma/Design Files: Put here
 - Content Tracker: Google Drive/Notion Links
 
