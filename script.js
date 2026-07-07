@@ -26,10 +26,15 @@ fadeItems.forEach((item) => {
     observer.observe(item);
 });
 
-const loader = document.getElementById("loader");
+const loader = document.getElementById("#loader");
 
-window.addEventListener("load",  () =>{
-    setTimeout(() => {
+function hideLoader() {
+    if (loader) {
         loader.classList.add("hide");
-    }, 600);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(hideLoader, 700);
 });
+setTimeout(hideLoader, 3000);
