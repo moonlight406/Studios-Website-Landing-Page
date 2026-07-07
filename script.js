@@ -25,3 +25,11 @@ const observer = new IntersectionObserver(
 fadeItems.forEach((item) => {
     observer.observe(item);
 });
+
+const loader = document.getElementById("loader");
+
+window.addEventListener("load",  () =>{
+    setTimeout(() => {
+        loader.classList.add("hide");
+    }, 600);
+});
