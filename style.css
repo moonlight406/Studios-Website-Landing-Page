@@ -519,6 +519,7 @@ input {
   border: 1px solid var(--border);
   background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.3), transparent 35%),
               rgba(20, 20, 20, 0.8);
+              -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
 
@@ -548,8 +549,8 @@ input {
   background: 
     linear-gradient(130deg, rgba(198, 255, 0, 0.12), transparent 45%),
     rgba(20, 20, 20, 0.82);
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 34px;
   padding: clamp(35px, 7vw, 90px);
