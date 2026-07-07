@@ -28,3 +28,22 @@ const playButton = document.querySelector(".play-button");
 playButton.addEventListener("click", function () {
     alert("Connect this button to your latest Youtube episode or Spotify link.");
 });
+
+const fadeItems = document.querySelectorAll(".fade-up");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+},
+{ 
+    threshold: 0.15 
+}
+);
+
+fadeItems.forEach((item) => {
+    observer.observe(item);
+});
