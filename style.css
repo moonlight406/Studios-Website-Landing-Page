@@ -297,6 +297,7 @@ input {
 /* TICKER */
 
 .ticker {
+  width: 100%;
   overflow: hidden;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -305,14 +306,24 @@ input {
 
 .ticker-track {
   display: flex;
-  gap: 70px;
   width: max-content;
-  animation: scrollTicker 24s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  animation: scrollTicker 28s linear infinite;
 }
 
-.ticker-track span {
+.ticker-group {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  padding-right: 72px;
+  flex-shrink: 0;
+}
+
+.ticker-group span {
   color: var(--accent);
   font-weight: 700;
+  font-size: 0.9rem;
   letter-spacing: 1.5px;
   white-space: nowrap;
 }
@@ -323,8 +334,12 @@ input {
   }
 
   to {
-    transform: translateX(-40%);
+    transform: translateX(-25%);
   }
+}
+
+.ticker:hover .ticker-track {
+  animation-play-state: paused;
 }
 
 /* GENERAL SECTIONS */
