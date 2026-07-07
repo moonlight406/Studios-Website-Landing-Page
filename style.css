@@ -308,33 +308,34 @@ input {
   display: flex;
   width: max-content;
   will-change: transform;
-  transform: translate3d(0, 0, 0);
-  animation: scrollTicker 28s linear infinite;
+  animation: tickerMove 35s linear infinite;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
-.ticker-group {
+.ticker-content {
   display: flex;
-  align-items: center;
-  gap: 72px;
-  padding-right: 72px;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
-.ticker-group span {
+.ticker-content span {
+  display: inline-block;
   color: var(--accent);
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 1.5px;
   white-space: nowrap;
+  padding-right: 72px;
 }
 
-@keyframes scrollTicker {
+@keyframes tickerMove {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   to {
-    transform: translateX(-25%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
