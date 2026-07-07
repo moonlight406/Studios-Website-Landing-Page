@@ -40,24 +40,35 @@ document.addEventListener("DOMContentLoaded", () => {
 setTimeout(hideLoader, 3000);
 
 const cursor = document.querySelector(".custom-cursor");
+const cursorText = cursor?.querySelector("span");
 
 if (window.matchMedia("(pointer: fine)").matches && cursor) {
-    window.addEventListener("mousemove", (event) => {
-        cursor.style.left = `${event.clientX}px`;
-        cursor.style.top = `${event.clientY}px`;
-    });
+  window.addEventListener("mousemove", (event) => {
+    cursor.style.left = `${event.clientX}px`;
+    cursor.style.top = `${event.clientY}px`;
+  });
 
-    const cursorTargets = document.querySelectorAll(
-    "a, button, .content-card, .hero-card, .story-card, .community-card"
+  const cursorTargets = document.querySelectorAll(
+    "a, button, .content-card, .hero-card, .story-card, .community-card, .video-wrap"
   );
 
   cursorTargets.forEach((target) => {
     target.addEventListener("mouseenter", () => {
+      const label = target.dataset.cursor || "VIEW";
+
       cursor.classList.add("cursor-hover");
+
+      if (cursorText) {
+        cursorText.textContent = label;
+      }
     });
 
     target.addEventListener("mouseleave", () => {
       cursor.classList.remove("cursor-hover");
+
+      if (cursorText) {
+        cursorText.textContent = "VIEW";
+      }
     });
   });
 
